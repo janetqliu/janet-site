@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600;7..72,700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Janet Liu | Research</title>
 </head>
@@ -23,39 +23,56 @@
   <main>
     <section>
       <h1 class="page-title">Research experience</h1>
-      <p>My research asks a practical question: when we put technology in front of learners, who actually benefits? Educational tools are often judged by their average effect, but an average can hide a lot. A tutor that helps strong students pull further ahead while struggling students stay put can look like a success on paper. This pattern, often called the Matthew effect, is the thread running through most of my current work.</p>
-      <p>I came to this question through language. Growing up between Mandarin and English, and later working on language acquisition and Spanish linguistics research, I saw how much a learner's starting point shapes what they get out of an experience. At Carnegie Mellon, I carried that interest into math education, studying how students learn with an AI-based tutor compared with paper practice.</p>
-      <p>Methodologically, I work mostly with classroom log data and pre- and post-test scores. I use mixed-effects models in R to account for students being nested within classes and schools, and learning-curve methods such as iAFM to estimate how quickly students improve with practice. I care about doing this carefully: preregistering hypotheses, separating confirmatory from exploratory results, and reporting what didn't work alongside what did.</p>
-      <p>Long term, I want to do research in industry, close to the products students actually use, so that findings turn into better tools rather than staying in papers.</p>
-      <figure class="figure">
-        <img src="assets/research.jpg" alt="Janet presenting her research poster">
-        <figcaption>Presenting my Mathtutor research poster.</figcaption>
+      <p>What began as a fascination with language has grown into a question that continues 
+        to drive my research interests: how do people learn, and how can AI and technology scaffold and 
+        support learning? This fascination first led me to studying language acquisition in children with autism, 
+        and later towards analyzing learning gains with intelligent tutoring systems. Here is some of my previous
+        research experience:
+
+      <ul class="experience-list">
+        <li><strong>REU Intern @ Carnegie Mellon University Human-Computer Interaction Institute:</strong> 
+          Worked with Conrad Borchers and Vincent Aleven on Mathtutor, an AI-based tutoring system. 
+          Led analyses of learning gains, goal setting, and equity in a crossover study comparing tutor 
+          and paper practice. First author on the resulting paper, under review at LAK 2027.</li>
+        <figure class="figure">
+        <img src="assets/janetresearch.jpeg" alt="Janet presenting her research poster">
+        <figcaption>Presenting my REU research poster!</figcaption>
       </figure>
+        <li><strong>PEAK Fellow & Research Assistant @ Northeastern University QLAB:</strong>
+          Designed and conducted an independent research study investigating the reliability and language skill 
+          applicability of a novel phonemic statistical learning task. Coordinated recruitment, scheduling, and behavioral/
+        linguistic assessment sessions with children with and without autism.</li>
+        <li><strong>Research Assistant @ Dialogue of Civilizations (España: Muchas y Diversas):</strong> 
+          Conducted three Spanish field linguistics research projects while studying in Granada, Barcelona, and San Sebastián.</li>
+        <li><strong>Next:</strong>
+          Coming soon..!</li>
+      </ul>
+
+      <p> After I graduate, I plan 
+        to pursue a PhD in Human-Computer Interaction with a focus on learning sciences and technology. 
+        Ultimately, I hope to collaborate with industry partners to study learning technologies that 
+        will reach millions of students.</p>
+      
     </section>
 
     <section>
-      <h2>Projects</h2>
-      <p>Choose a project to see what it was about and what I did.</p>
-      <div class="button-row" id="project-buttons" role="group" aria-label="Research projects"></div>
-      <div class="project-panel" id="project-panel" aria-live="polite"></div>
+      <h2>Where I've done research</h2>
+      <p>Drag the globe to see all of the cool places I've done research! (You can hover on the points for more information.)</p>
+      <div id="globe"></div>
     </section>
 
     <section>
-      <h2>Where my projects overlap</h2>
-      <p>Each dot marks a research area a project touches. Built with D3 from the same data as the project buttons.</p>
-      <div class="chart-wrap" id="area-chart"></div>
-    </section>
-
-    <section>
-      <h2>CV</h2>
+      <h2>My CV</h2>
       <iframe class="cv-embed" src="assets/cv.pdf" title="Janet Liu CV"></iframe>
       <div class="button-row">
         <a class="btn" href="assets/cv.pdf" target="_blank" rel="noopener">Open CV in a new tab</a>
       </div>
     </section>
   </main>
-  <footer class="site-footer">© 2026 Janet Liu</footer>
+  <footer class="site-footer">Janet Liu | DS 4200 Homework 7</footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-  <script src="js/research.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/versor@0.2.0/dist/versor.min.js"></script>
+  <script src="js/globe.js"></script>
 </body>
 </html>

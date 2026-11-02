@@ -1,14 +1,16 @@
 /* ---------- Design tokens ---------- */
 :root {
-  --ink: #1f2a44;        /* main text, headings, solid buttons */
-  --ink-soft: #4a5672;   /* secondary text */
-  --paper: #f7f9fb;      /* page background */
-  --grid: #e3eaf1;       /* graph-paper lines */
-  --accent: #2f7d6d;     /* links, highlights, chart dots */
-  --accent-pale: #dcefe9;/* hover / selected fills */
+  --ink: #3b2a20;        /* dark brown: text, headings, borders, solid buttons */
+  --ink-soft: #6e5646;   /* softer brown: secondary text */
+  --paper: #fbf6ee;      /* light cream: page background */
+  --grid: #efe4d4;       /* graph-paper lines */
+  --accent: #b8406a;     /* pink: links, highlights, chart dots */
+  --accent-pale: #f8dde6;/* light pink: hover / selected fills */
+  --surface: #fffdf9;    /* content panel */
+  --radius: 6px;         /* button corners */
 
-  --font-head: "Literata", Georgia, "Times New Roman", serif;
-  --font-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-head: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
 
   --measure: 68ch;       /* comfortable line length */
   --space: 1.5rem;
@@ -23,18 +25,13 @@ body {
   font-size: 1.0625rem;
   line-height: 1.6;
   color: var(--ink);
-  /* graph-paper background: a nod to math learning + data */
   background-color: var(--paper);
-  background-image:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 28px 28px;
 }
 
-h1, h2, h3 { font-family: var(--font-head); line-height: 1.2; margin: 0 0 0.5em; }
-h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); font-weight: 700; letter-spacing: -0.01em; }
-h2 { font-size: 1.6rem; font-weight: 600; }
-h3 { font-size: 1.2rem; font-weight: 600; }
+h1, h2, h3 { font-family: var(--font-head); font-weight: 400; line-height: 1.15; margin: 0 0 0.5em; }
+h1 { font-size: clamp(2.8rem, 7vw, 4.2rem); letter-spacing: -0.01em; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.4rem; }
 
 p { max-width: var(--measure); margin: 0 0 1em; }
 a { color: var(--accent); }
@@ -56,8 +53,7 @@ img { max-width: 100%; display: block; }
   gap: 1rem;
   flex-wrap: wrap;
 }
-.site-name { font-family: var(--font-head); font-weight: 700; color: var(--ink); text-decoration: none; }
-.nav-links { list-style: none; display: flex; gap: 1.25rem; margin: 0; padding: 0; }
+.site-name { font-family: var(--font-head); font-size: 1.4rem; color: var(--ink); text-decoration: none; }.nav-links { list-style: none; display: flex; gap: 1.25rem; margin: 0; padding: 0; }
 .nav-links a { color: var(--ink); text-decoration: none; padding-bottom: 2px; }
 .nav-links a:hover { color: var(--accent); }
 .nav-links a[aria-current="page"] { border-bottom: 2px solid var(--accent); }
@@ -66,9 +62,7 @@ img { max-width: 100%; display: block; }
 main {
   max-width: 960px;
   margin: 2.5rem auto;
-  padding: 2.5rem var(--space);
-  background: #ffffff;
-  border: 2px solid var(--ink);
+  padding: 0 var(--space);
 }
 section + section { margin-top: 3rem; }
 
@@ -82,10 +76,11 @@ section + section { margin-top: 3rem; }
   align-items: start;
 }
 .photo-frame {
-  aspect-ratio: 4 / 5;
-  border: 2px solid var(--ink);
+  aspect-ratio: 4 / 4;
+  border: 1px solid var(--ink);
   background: var(--accent-pale);
   overflow: hidden;
+  border-radius: 10px;
 }
 .photo-frame img { width: 100%; height: 100%; object-fit: cover; }
 .hero h1 { margin-top: 0.25rem; }
@@ -98,7 +93,8 @@ section + section { margin-top: 3rem; }
   padding: 0.65rem 1.25rem;
   border: 2px solid var(--ink);
   background: var(--ink);
-  color: #ffffff;
+  border-radius: var(--radius);
+  color: var(--surface);
   text-decoration: none;
   cursor: pointer;
 }
@@ -109,23 +105,14 @@ section + section { margin-top: 3rem; }
 }
 
 /* ---------- Research ---------- */
-.page-title { font-size: 2.2rem; }   /* smaller than the home page h1 */
-.figure { margin: 1.5rem 0; }
-.figure img { border: 2px solid var(--ink); }
+.page-title { font-size: 2.6rem; }   /* smaller than the home page h1 */
+.figure { margin: 1.5rem 0; text-align: center;}
+.figure img { border: 1px solid var(--ink); width: 40%; margin: 0 auto; border-radius: 10px;}
 .figure figcaption { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.4rem; }
 
-.project-panel {
-  margin-top: 1.25rem;
-  padding: 1.5rem;
-  border-left: 4px solid var(--accent);
-  background: var(--paper);
-}
-.project-meta { color: var(--ink-soft); margin-bottom: 0.75rem; }
-.project-panel ul { padding-left: 1.2rem; max-width: var(--measure); }
-.project-panel li + li { margin-top: 0.35rem; }
-
-.chart-wrap { overflow-x: auto; }
-.chart-wrap svg { font-family: var(--font-body); }
+.experience-list { max-width: var(--measure); padding-left: 1.2rem; margin: 0 0 1.25rem; }
+.experience-list li { margin-bottom: 0.75rem; }
+.experience-list li::marker { color: var(--accent); }
 
 .cv-embed { width: 100%; height: 80vh; min-height: 500px; border: 2px solid var(--ink); }
 
@@ -136,11 +123,3 @@ section + section { margin-top: 3rem; }
   padding: 1rem 0; border-bottom: 1px solid var(--grid);
 }
 .contact-list .label { width: 6rem; font-weight: 600; flex-shrink: 0; }
-
-/* ---------- Small screens ---------- */
-@media (max-width: 640px) {
-  main { margin: 1rem; padding: 1.5rem 1.1rem; }
-  .hero { grid-template-columns: 1fr; gap: 1.5rem; }
-  .photo-frame { max-width: 220px; }
-  .contact-list li { flex-direction: column; gap: 0.2rem; }
-}

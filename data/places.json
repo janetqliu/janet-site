@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Pittsburgh, PA", "label": "Carnegie Mellon University Human-Computer Interaction Institute" },
+      "geometry": { "type": "Point", "coordinates": [-79.94, 40.44] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Boston, MA", "label": "Northeastern University" },
+      "geometry": { "type": "Point", "coordinates": [-71.09, 42.34] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Granada, Spain", "label": "Dialogue of Civilizations" },
+      "geometry": { "type": "Point", "coordinates": [-3.60, 37.18] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Barcelona, Spain", "label": "Dialogue of Civilizations" },
+      "geometry": { "type": "Point", "coordinates": [2.17, 41.39] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "San Sebastián, Spain", "label": "Dialogue of Civilizations" },
+      "geometry": { "type": "Point", "coordinates": [-1.98, 43.32] }
+    }
+  ]
+}
