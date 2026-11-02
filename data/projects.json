@@ -1,0 +1,63 @@
+{
+  "areas": [
+    "Language learning",
+    "Learning technology",
+    "Educational data mining",
+    "Equity in education"
+  ],
+  "projects": [
+    {
+      "id": "mathtutor",
+      "short": "Mathtutor",
+      "title": "Mathtutor: AI tutoring vs. paper practice",
+      "where": "CATS Lab, Carnegie Mellon University (HCI REU)",
+      "with": "Conrad Borchers and Vincent Aleven",
+      "summary": "A crossover study comparing students' learning gains when they practice math in Mathtutor, an AI-based tutoring system, versus on paper, with a focus on whether the tutor helps students with lower prior knowledge catch up or leaves them further behind.",
+      "contributions": [
+        "Led confirmatory and exploratory analyses of learning gains, goal setting, and equity (the Matthew effect)",
+        "Built mixed-effects models in R with random effects for student, unit, class, and school",
+        "Assisted with strategy and learning-curve (iAFM) analyses",
+        "Led paper framing and writing; first author on a LAK 2027 submission (under review)",
+        "Created and presented a research poster"
+      ],
+      "areas": ["Learning technology", "Educational data mining", "Equity in education"]
+    },
+    {
+      "id": "qlab",
+      "short": "QLAB",
+      "title": "Language acquisition research",
+      "where": "QLAB, Northeastern University",
+      "with": "",
+      "summary": "Research assistant work on how people acquire language, which first got me interested in how a learner's background shapes learning.",
+      "contributions": [
+        "Supported language acquisition studies as a research assistant"
+      ],
+      "areas": ["Language learning"]
+    },
+    {
+      "id": "spanish",
+      "short": "Spanish linguistics",
+      "title": "Spanish linguistics projects",
+      "where": "Dialogue of Civilizations, Northeastern University",
+      "with": "",
+      "summary": "Research projects on Spanish linguistics completed during a Northeastern Dialogue of Civilizations program.",
+      "contributions": [
+        "Designed and completed research projects on Spanish linguistics"
+      ],
+      "areas": ["Language learning"]
+    },
+    {
+      "id": "bgc",
+      "short": "Brain Game Center",
+      "title": "Digital math learning tools (starting spring 2027)",
+      "where": "Brain Game Center, AJC Merit Research Fellowship",
+      "with": "Dr. Susanne Jaeggi and Dr. Aaron Seitz",
+      "summary": "Upcoming fellowship developing and validating digital learning tools to improve math education outcomes for Black and Latinx children.",
+      "contributions": [
+        "Help develop digital math learning tools",
+        "Help validate their effects on student outcomes"
+      ],
+      "areas": ["Learning technology", "Equity in education"]
+    }
+  ]
+}

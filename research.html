@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600;7..72,700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Janet Liu | Research</title>
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Main">
+      <a class="site-name" href="index.html">Janet Liu</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" aria-current="page">Research</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1 class="page-title">Research experience</h1>
+      <p>My research asks a practical question: when we put technology in front of learners, who actually benefits? Educational tools are often judged by their average effect, but an average can hide a lot. A tutor that helps strong students pull further ahead while struggling students stay put can look like a success on paper. This pattern, often called the Matthew effect, is the thread running through most of my current work.</p>
+      <p>I came to this question through language. Growing up between Mandarin and English, and later working on language acquisition and Spanish linguistics research, I saw how much a learner's starting point shapes what they get out of an experience. At Carnegie Mellon, I carried that interest into math education, studying how students learn with an AI-based tutor compared with paper practice.</p>
+      <p>Methodologically, I work mostly with classroom log data and pre- and post-test scores. I use mixed-effects models in R to account for students being nested within classes and schools, and learning-curve methods such as iAFM to estimate how quickly students improve with practice. I care about doing this carefully: preregistering hypotheses, separating confirmatory from exploratory results, and reporting what didn't work alongside what did.</p>
+      <p>Long term, I want to do research in industry, close to the products students actually use, so that findings turn into better tools rather than staying in papers.</p>
+      <figure class="figure">
+        <img src="assets/research.jpg" alt="Janet presenting her research poster">
+        <figcaption>Presenting my Mathtutor research poster.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <p>Choose a project to see what it was about and what I did.</p>
+      <div class="button-row" id="project-buttons" role="group" aria-label="Research projects"></div>
+      <div class="project-panel" id="project-panel" aria-live="polite"></div>
+    </section>
+
+    <section>
+      <h2>Where my projects overlap</h2>
+      <p>Each dot marks a research area a project touches. Built with D3 from the same data as the project buttons.</p>
+      <div class="chart-wrap" id="area-chart"></div>
+    </section>
+
+    <section>
+      <h2>CV</h2>
+      <iframe class="cv-embed" src="assets/cv.pdf" title="Janet Liu CV"></iframe>
+      <div class="button-row">
+        <a class="btn" href="assets/cv.pdf" target="_blank" rel="noopener">Open CV in a new tab</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">© 2026 Janet Liu</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+  <script src="js/research.js"></script>
+</body>
+</html>
